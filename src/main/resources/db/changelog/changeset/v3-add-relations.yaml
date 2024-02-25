@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5
+      author: Valashchuk
+      changes:
+        - addColumn:
+            tableName: employee
+            columns:
+              - column:
+                  name: company_id
+                  type: INT
+
+  - changeSet:
+      id: 6
+      author: Valashchuk
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: employee
+            baseColumnNames: company_id
+            constraintName: fk_company_id
+            referencedTableName: company
+            referencedColumnNames: id

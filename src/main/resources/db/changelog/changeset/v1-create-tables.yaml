@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-company-table
+      author: Valashchuk
+      changes:
+        - createTable:
+            tableName: company
+            ifNotExists: true
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(255)
+
+  - changeSet:
+      id: create-employee-table
+      author: Valashchuk
+      changes:
+        - createTable:
+            tableName: employee
+            ifNotExists: true
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(255)

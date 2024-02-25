@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: Valashchuk
+      changes:
+        - addColumn:
+            tableName: company
+            columns:
+              - column:
+                  name: domain
+                  type: varchar(255)
+
+  - changeSet:
+      id: 4
+      author: Valashchuk
+      changes:
+        - addColumn:
+            tableName: employee
+            columns:
+              - column:
+                  name: role
+                  type: varchar(255)
