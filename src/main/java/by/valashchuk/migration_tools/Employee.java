@@ -12,6 +12,12 @@ public class Employee {
 
     private String name;
 
+    private String role;
+
+    @ManyToOne
+    @JoinColumn(name = "company_id")
+    private Company company;
+
     public Long getId() {
         return id;
     }
@@ -26,5 +32,21 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 }
